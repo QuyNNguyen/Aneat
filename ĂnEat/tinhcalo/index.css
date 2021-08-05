@@ -1,0 +1,73 @@
+/*@font-face {
+    font-family: 'qool';
+    src: url('../fonts/freight_sans_book_sc-webfont.woff2') format('woff2'),
+         url('../fonts/freight_sans_book_sc-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+
+/*
+.navbar-nav a {
+	
+    font-family: "qool", serif;
+    letter-spacing: 2px;
+    color: black !important;
+
+}
+
+.navbar-nav > li{
+  	margin-left:20px;
+  	margin-right:10px;
+  	margin-top: 30px;
+}
+
+.navbar {min-height:140px !important}*/
+
+.navbar-custom {
+    background-color: #A8D0E6;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,1);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    font-family: "Roboto";
+    color: rgba(255,255,255,.9);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+
+.action-button
+{
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none;  
+}
+
+.yellow
+{
+  background-color: #F2CF66;
+  border-bottom: 5px solid #D1B358;
+  text-shadow: 0px -2px #D1B358;
+}
+
+.action-button:active
+{
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+  border-bottom: 1px solid;
+}
+

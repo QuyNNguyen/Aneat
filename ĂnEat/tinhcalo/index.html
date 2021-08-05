@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="index.css">
+
+     <!-- Googlefont -->
+     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Máy Tính Calo | Get Fit</title>
+  </head>
+
+
+  <body style="background-color: #A8D0E6;">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom" style="background-color: #A8D0E6; font-family: 'Roboto'; color: #FFFFFF;">
+      <a class="navbar-brand" href="../">
+        <img src="https://i.ibb.co/vzKcn0r/logo-offical.png"border="0" alt="AnEat">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../">Máy Tính Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../tailieu">Tài Liệu</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <br>
+
+
+
+    <div class="container-fluid">
+      <div class="col-lg-4 offset-lg-4" style="border-style: solid; border-width: 1px; border-radius: 5px; border-color: #9bc3d9; margin-bottom: 20px;background-color: #FFFFFF; color:#51626c; ">
+        <h2 style="text-align: center; font-family: 'Roboto'; padding: 20px 0 10px 0;">Máy tính Calorie </h2>
+        <form action="calculate.php">
+
+
+          <div class="form-group row">
+              <legend class="col-form-label col-md-3 pt-0" style="font-weight: 500;">Giới Tính</legend>
+              <div class="form-check"  style="padding-left: 35px;">
+                <input class="form-check-input" type="radio" name="sex" id="sex-op1" value="female" checked>
+                <label class="form-check-label" for="sex-op1">
+                  Nữ
+                </label>
+              </div>
+              <div class="form-check" style="padding-left: 80px;">
+                <input class="form-check-input" type="radio" name="sex" id="sex-op2" value="male">
+                <label class="form-check-label" for="sex-op2">
+                  Nam
+                </label>
+              </div>
+            </div>
+
+
+          <div class="form-group row">
+            <label for="age-input" class="col-md-3 col-form-label" style="font-weight: 500;">Tuổi</label>
+            <div class="col-md-4"> 
+              <input type="number" class="form-control" id="age-input" name="age" placeholder="" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="height-input" class="col-md-3 col-form-label" style="font-weight: 500;">Chiều Cao</label>
+            <div class="col-sm-4"> 
+              <input type="number" class="form-control" id="height-input" name= "height" placeholder="cm" required>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <label for="weight-input" class="col-md-3 col-form-label" style="font-weight: 500;">Cân</label>
+            <div class="col-md-4"> 
+              <input type="number" class="form-control" id="weight-input" name= "weight" placeholder="kg" required>
+            </div>
+          </div>
+
+
+<!--           <div class="form-group row">
+            <label for="activity-input" class="col-md-7 col-form-label" style="font-weight: 500;">Mức độ hoạt động</label>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <select class="form-control" id="activity-input" name="activity-level" required>
+                <option>Thể dục ít (Công việc văn phòng)</option>
+                <option>Thể dục vừa (1-2 ngày/1 tuần)</option>
+                <option>Thể dục thường xuyên (3-5 ngày/1 tuần)</option>
+                <option>Thể dục nhiều (6-7 ngày/1 tuần)</option>
+                <option>Vận động viên (2 lần/1 ngày)</option>
+              </select>
+            </div>
+          </div> -->
+
+<!--           <div class="form-group row">
+            <label for="fat-input" class="col-md-3 col-form-label" style="font-weight: 500;">% Mỡ</label>
+            <div class="col-md-5"> 
+              <input type="text" class="form-control" id="fat-input" name="fat" placeholder="không bắt buộc">
+            </div>
+          </div> -->
+
+
+          <div class="form-group row">
+            <div class="col-md-4 offset-md-8">
+            <button style="background: #A8D0E6; border: none;"class="btn btn-primary" type="submit">Tính Calo!</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+

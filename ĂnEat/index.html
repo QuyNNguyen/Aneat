@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146609496-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146609496-1');
+    </script>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="index.css">
+
+     <!-- Googlefont -->
+     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+     <!-- JQuery -->
+<!--      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
+    <title>Trang chủ | Tạo Kế Hoạch Dinh Dưỡng </title>
+  </head>
+  <body style="background-color: #A8D0E6; font-family: 'Roboto'; color: #FFFFFF;">
+
+
+  	<!-- Navbar  -->
+  	<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+  	  <a class="navbar-brand" href="#">
+
+
+  	  	<img src="https://i.ibb.co/vzKcn0r/logo-offical.png" border="0" alt="ĂnEat">
+  	  </a>
+  	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  	    <span class="navbar-toggler-icon"></span>
+  	  </button>
+  	  <div class="collapse navbar-collapse" id="navbarNav">
+  	    <ul class="navbar-nav">
+  	      <li class="nav-item">
+  	        <a class="nav-link" href="./tinhcalo">Máy Tính Calo</a>
+  	      </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color:#FFFFFF" href="http://bit.ly/2Pl144o-top">>Bản Chính Thức<</a>
+          </li>
+  	      <li class="nav-item">
+  	        <a class="nav-link" href="./tailieu">Tài Liệu</a>
+  	      </li>
+  	    </ul>
+  	  </div>
+  	</nav>
+
+
+
+  	<div class="container-fluid">
+      <br><br>
+  		<div class="col-lg-6 offset-lg-3"> 			
+  			<p style="font-size: 30px;font-weight: bold;"> Giảm, tăng cân theo lượng Calories <br> 
+  			<span style="font-size: 20px;font-weight: normal;"> Lên thực đơn gồm món ăn 3 nguyên liệu, dưới 10p  </span></p>
+  		</div>
+
+
+
+  		<div class="col-lg-6 offset-lg-3" style="border-style: solid; border-width: 1px; border-radius: 5px; border-color: #FFFFFF; padding-top: 20px; margin-bottom: 20px;">	
+        <form id='caloform' method='post'>
+  						<div class="form-group row">
+  						            <label for="calo-input" class="col-md-3 offset-md-1 col-form-label" style="font-weight: 500;">Bạn muốn ăn</label>
+  						            <div class="col-md-4"> 
+  						              <input type="number" min='800' max='3000' class="form-control" id="calo-input" name="calo-input" value="1300" required>
+  						            </div>
+  						            <label for="calo-input" class="col-md-3 col-form-label" style="font-weight: 500;">calo mỗi ngày</label>
+  						</div>
+
+  						<div class="form-group row">
+  						  <div class="col-md-8 offset-md-4">
+
+  						  <button style="background: #E08480; border: none;"class="btn btn-primary float-right" type="submit" id="menu-button">Lên Thực Đơn!</button>
+  						  </div>
+  						</div>
+  			</form>
+  		</div>
+
+
+
+
+
+  		<div class="col-lg-6 offset-lg-3"> 	
+
+  			<a class="btn btn-primary float-right" href="./tinhcalo" role="button" style="background: #FFE984; border: none; color:#000000;">Không biết bạn nên ăn bao nhiêu Calo? Hãy ấn vào đây!</a>
+
+  		</div>
+
+
+
+      <!-- Results -->
+      <!--  Breakfast  -->
+      <div class="col-lg-6 offset-lg-3" style="padding-top: 100px; word-wrap: break-word; clear:both; color:#000000;">
+
+        <p id="breakfast-header" style="font-size: 20px;"></p>
+        <hr style=" border-color: #000000; border-width: 2px;display: none;" id='line1'> 
+
+      </div>  
+
+
+        <!--  Breakfast 1 -->
+        <div class="col-lg-6 offset-lg-3" style="word-wrap: break-word;color:#000000;">
+          <p id="breakfast1-name"> 
+          </p>
+
+
+          <div class="col-md-6 float-left">
+            <p id= "breakfast1-ingredients" style="white-space: pre;">
+            </p>
+
+          </div>
+
+          <div class="col-md-6 float-right">
+            <p id= "breakfast1-how-to" style="white-space: pre;">
+            </p>
+          </div>
+        </div>
+
+
+
+        <!-- Breakfast 2 -->
+
+        <div class="col-lg-6 offset-lg-3" style="word-wrap: break-word; clear:both; padding-top: 40px;color:#000000;">
+          <p id="breakfast2-name"> 
+          </p>
+          <div class="col-md-6 float-left">
+            <p id= "breakfast2-ingredients" style="white-space: pre;">
+            </p>
+
+          </div>
+
+          <div class="col-md-6 float-right">
+            <p id= "breakfast2-how-to" style="white-space: pre;">
+            </p>
+          </div>
+        </div>
+
+
+
+
+    <!-- Lunch -->
+    <div class="col-lg-6 offset-lg-3" style="padding-top: 50px; word-wrap: break-word; clear:both;color:#000000;">
+
+      <p id="lunch-header" style="font-size: 20px;"></p>
+      <hr style=" border-color: #000000; border-width: 2px;display: none;" id='line2'> 
+
+    </div>  
+
+
+      <!--  Lunch 1 -->
+      <div class="col-lg-6 offset-lg-3" style="word-wrap: break-word;color:#000000;">
+        <p id="lunch1-name"> 
+        </p>
+
+
+        <div class="col-md-6 float-left">
+          <p id= "lunch1-ingredients" style="white-space: pre;">
+          </p>
+
+        </div>
+
+        <div class="col-md-6 float-right">
+          <p id= "lunch1-how-to" style="white-space: pre;">
+          </p>
+        </div>
+      </div>
+
+
+
+      <!-- Lunch 2 -->
+
+      <div class="col-lg-6 offset-lg-3" style="word-wrap: break-word; clear:both; padding-top: 40px;color:#000000;">
+        <p id="lunch2-name"> 
+        </p>
+        <div class="col-md-6 float-left">
+          <p id= "lunch2-ingredients" style="white-space: pre;">
+          </p>
+
+        </div>
+
+        <div class="col-md-6 float-right">
+          <p id= "lunch2-how-to" style="white-space: pre;">
+          </p>
+        </div>
+      </div>
+
+
+
+    <!-- Dinner -->
+
+
+      <div class="col-lg-6 offset-lg-3" style="padding-top: 50px; word-wrap: break-word; clear:both;color:#000000;">
+        <p id="dinner-header" style="font-size: 20px;"></p>
+        <hr style=" border-color: #000000; border-width: 2px;display: none;" id='line3'> 
+      </div>  
+      <!--  Dinner 1 -->
+      <div class="col-lg-6 offset-lg-3" style="word-wrap: break-word;color:#000000;">
+        <p id="dinner1-name"> 
+        </p>
+        <div class="col-md-6 float-left">
+          <p id= "dinner1-ingredients" style="white-space: pre;">
+          </p>
+
+        </div>
+
+        <div class="col-md-6 float-right">
+          <p id= "dinner1-how-to" style="white-space: pre;">
+          </p>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+     <!--  Total day -->
+      <div class="col-lg-4 offset-lg-4" style="padding-top: 50px; clear:both;color:#000000;">
+       <hr style=" border-color: #FFFFFF; border-width: 1px;display: none;" id='line4'> 
+      </div>
+
+      <div class="col-lg-4 offset-lg-4" style="padding-top: 10px;color:#000000;">
+      <p id= "day-header" style="margin-left: 20%; font-size: 20px;"></p>
+      <p id= "day-calo" style="margin-left: 20%;"></p>
+      <p id= "day-protein" style="margin-left: 20%;"></p>
+      <p id= "day-fat" style="margin-left: 20%;"> </p>
+      <p id= "day-carb" style="margin-left: 20%;"> </p>
+
+
+      </div>
+
+
+
+      <div class="col-lg-4 offset-lg-4" style="padding-top: 50px; clear:both; color: #000000">
+<!--  -->
+            <p> BẢN CHÍNH THỨC SẮP RA MẮT! (Đổi từng món trong bữa, tạo kế hoạch 1 tuần với danh sách đồ cần mua, nhiều công thức hơn!)
+                Hãy Để lại Email hoặc SĐT để nhận thông báo! 
+
+             </p>
+
+      </div>
+
+
+
+
+      <!-- SubBox -->
+      <div class="col-lg-12" style="padding-top: 5px; background: #e25098;padding-top:10px; padding-bottom: 10px; border-radius: 5px; clear:both;">
+
+      <div class="row" style="padding-left: 10px; padding-right: 10px;">
+        <p class="col-md-3 offset-md-3 col-form-label"> Bản Chính Thức Sắp Ra Mắt!</p>
+        <a class="btn btn-primary col-md-3" id="gopy" href="http://bit.ly/2KZk3NE-bottom" role="button" style="background: #FFFFFF; border: 1px; color:#e25098; border-radius: 12px;">&hearts; Nhận Thông Báo &hearts;</a>
+
+      </div>
+       <!--  <form action="getcontact.php" method="post">
+          <div class="form-group row">
+            <label for="contact-input" class="col-md-3 offset-md-2 col-form-label" style="font-weight: 500;">Nhận thông báo của bản chính thức</label> -->
+<!--             <a class="btn btn-primary" id="gopy" href="https://forms.gle/AL2fAcPhYhZKsLPs9" role="button" style="background: #e25098; border: none; color:#FFFFFF; display:block; height:50px;">Để lại Email, SĐT&hearts;</a> -->
+<!--             <div class="col-md-3"> 
+              <input type="email" class="form-control" id="email-input" name="email-input" value="@gmail.com">
+            </div>
+
+            <div class="col-md-2"> 
+              <button class="btn btn-primary float-right" style="background: #FFFFFF; border: 1px; color:#e25098; border-radius: 12px;" type="submit">Để Lại Email &hearts;</button>
+            </div>
+
+          </div>
+
+          <div class="form-group row">
+            <label for="calo-input" class="col-md-3 offset-md-2 col-form-label" style="font-weight: 500;">Nhận thông báo của bản chính thức</label>
+              <div class="col-md-3"> 
+                  <input type="text" class="form-control" id="phone-input" name="phone-input" value="0913xxxxxx">
+              </div> 
+
+              <div class="col-md-2"> 
+                  <button class="btn btn-primary float-right" style="background: #FFFFFF; border: 1px; color:#e25098; border-radius: 12px;" type="submit">Để Lại SĐT &hearts;</button>
+              </div> -->
+
+<!--           </div>        
+        </form> -->
+      </div>
+
+
+
+
+  	</div>
+
+
+
+
+
+
+
+
+<!-- Javascript to handle interactive plan 
+ -->
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#caloform').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: 'menu.php',
+            data: $(this).serialize(),
+            success: function(response)
+            {
+                var jsonData = JSON.parse(response);
+
+
+                //Scroll to result
+                document.getElementById( 'menu-button' ).scrollIntoView();
+
+                //Breakfast
+                document.getElementById("breakfast-header").innerHTML = "Bữa Sáng (" + jsonData['total_breakfast']['total_calo'] + " calo)";
+                document.getElementById("line1").style.display="block";
+
+                document.getElementById("breakfast1-name").innerHTML = jsonData['breakfast1']['dish_name']+ " (" + jsonData['breakfast1']['time_to_cook'] + "p)";
+                document.getElementById("breakfast1-ingredients").innerHTML = jsonData['breakfast1']['ingredients'];
+                if (jsonData['breakfast1']['how_to_cook']){
+                  document.getElementById("breakfast1-how-to").innerHTML = "Gợi ý cách làm: \n" + jsonData['breakfast1']['how_to_cook'];
+                }
+
+                //fruit and snack have different datastructure hence different code from regular dish
+                //if you want to change it later, CHANGE HERE 
+                if (jsonData['breakfast2']){
+                  document.getElementById("breakfast2-name").innerHTML = jsonData['breakfast2']['dish_name']+ " (" + jsonData['breakfast2']['time_to_cook'] + "p)";
+                  document.getElementById("breakfast2-ingredients").innerHTML = jsonData['breakfast2']['amount'] +" "+ jsonData['breakfast2']['unit'];
+                  if (jsonData['breakfast2']['how_to_cook']){
+                  document.getElementById("breakfast2-how-to").innerHTML = "Gợi ý cách làm: \n" + jsonData['breakfast2']['how_to_cook'];
+                  }
+               }
+
+
+                //Lunch
+                document.getElementById("lunch-header").innerHTML = "Bữa Trưa (" + jsonData['total_lunch']['total_calo'] + " calo)";
+                document.getElementById("line2").style.display="block";
+
+                document.getElementById("lunch1-name").innerHTML = jsonData['lunch1']['dish_name']+ " (" + jsonData['lunch1']['time_to_cook'] + "p)";
+                document.getElementById("lunch1-ingredients").innerHTML = jsonData['lunch1']['ingredients'];
+                if (jsonData['lunch1']['how_to_cook']){
+                document.getElementById("lunch1-how-to").innerHTML = "Gợi ý cách làm: \n" + jsonData['lunch1']['how_to_cook'];
+                }
+
+                //fruit and snack have different datastructure hence different code from regular dish
+                //if you want to change it later, CHANGE HERE 
+
+                if (jsonData['lunch2']){
+                  document.getElementById("lunch2-name").innerHTML = jsonData['lunch2']['dish_name']+ " (" + jsonData['lunch2']['time_to_cook'] + "p)";
+                  document.getElementById("lunch2-ingredients").innerHTML = jsonData['lunch2']['amount'] +" "+ jsonData['lunch2']['unit'];
+                  if (jsonData['lunch2']['how_to_cook']){
+                  document.getElementById("lunch2-how-to").innerHTML = "Gợi ý cách làm: \n" + jsonData['lunch2']['how_to_cook'];
+                  } 
+                }
+
+                //Dinner
+                document.getElementById("dinner-header").innerHTML = "Bữa Tối (" + jsonData['dinner1']['calo_per_serving'] + " calo)";
+                document.getElementById("line3").style.display="block";
+
+                document.getElementById("dinner1-name").innerHTML = jsonData['dinner1']['dish_name']+ " (" + jsonData['dinner1']['time_to_cook'] + "p)";
+                document.getElementById("dinner1-ingredients").innerHTML = jsonData['dinner1']['ingredients'];
+                if (jsonData['dinner1']['how_to_cook']){
+                  document.getElementById("dinner1-how-to").innerHTML = "Gợi ý cách làm: \n" + jsonData['dinner1']['how_to_cook'];
+                }
+
+
+
+                //Total_Day
+                document.getElementById("line4").style.display="block";
+                document.getElementById("day-header").innerHTML = "Tổng Hàm Lượng Dinh Dưỡng";
+                document.getElementById("day-calo").innerHTML = "Calo: " + jsonData['total_day']['total_calo']+ " calories";
+                document.getElementById("day-protein").innerHTML = "Đạm: " + jsonData['total_day']['total_protein'] + " g";
+                document.getElementById("day-fat").innerHTML = "Mỡ: " + jsonData['total_day']['total_fat']+ " g";
+                document.getElementById("day-carb").innerHTML = "Tinh Bột (Carb): " + jsonData['total_day']['total_carb']+ " g";
+
+
+                //Gop y
+                document.getElementById("gopy").style.display="block";
+           }
+       });
+     });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Optional JavaScript -->
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ </body>
+
+
+
+
